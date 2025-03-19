@@ -25,8 +25,6 @@ jobs:
       - name: 开始
         run: |
           pip3 install requests
-          pip3 install pyaes
-          pip3 install binascii
           python3 pyss.py
       - name: 提交文件
         run: |
