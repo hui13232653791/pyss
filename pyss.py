@@ -61,7 +61,7 @@ if j.status_code == 200:
         p = f"aes-256-cfb:{o['password']}@{o['ip']}:{o['port']}"
         q = base64.b64encode(p.encode('utf-8')).decode('utf-8')
         r = f"ss://{q}#{o['title']}"
-        # print(r)
+        print(r)
         encoded_r = base64.b64encode(r.encode('utf-8')).decode('utf-8')
         results.append(encoded_r + "\n")
    
