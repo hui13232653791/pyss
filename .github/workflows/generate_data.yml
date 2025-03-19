@@ -1,4 +1,4 @@
-name: Generate Data and Update Repository
+name: PYSS
 
 on:
   schedule:
