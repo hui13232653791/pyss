@@ -24,7 +24,7 @@ jobs:
           
       - name: 开始
         run: |
-          pip3 install requests pytz
+          pip3 install requests base64 json pyaes binascii datetime
           python3 pyss.py
       - name: 提交文件
         run: |
