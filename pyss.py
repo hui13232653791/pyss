@@ -64,5 +64,5 @@ if j.status_code == 200:
         print(r)
         results.append(r + "\n")
    
-    with open("ss.txt", "w") as outfile:
+    with open("ss", "w") as outfile:
         outfile.writelines(results)
