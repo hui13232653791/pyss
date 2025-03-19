@@ -56,12 +56,15 @@ if j.status_code == 200:
     l = binascii.unhexlify(k)
     m = f(l, d, e)
     n = json.loads(m)
-    print(n)
+    all_ss_links = ""
     for o in n['data']:
         p = f"aes-256-cfb:{o['password']}@{o['ip']}:{o['port']}"
         q = base64.b64encode(p.encode('utf-8')).decode('utf-8')
         r = f"ss://{q}#{o['title']}"
-        print(r)
-    
+        all_ss_links += r + "\n"
+
+    print(all_ss_links)
+    all_ss_links_base64 = base64.b64encode(all_ss_links.encode('utf-8')).decode('utf-8');
+    print(all_ss_links_base64)
     with open("ss", "w") as outfile:
-        outfile.writelines(n)
+        outfile.writelines(all_ss_links_base64)
