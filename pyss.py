@@ -63,5 +63,6 @@ if j.status_code == 200:
         r = f"ss://{q}#{o['title']}"
         print(r)
         results.append(r + "\n")
-   with open("ss.txt", "w") as outfile:
+   
+    with open("ss.txt", "w") as outfile:
         outfile.writelines(results)
