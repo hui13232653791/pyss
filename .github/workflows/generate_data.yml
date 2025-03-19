@@ -30,7 +30,7 @@ jobs:
         run: |
           git config --global user.email "1942590224@qq.com"
           git config --global user.name "wangyh"
-          git add ss.txt
+          git add ss
           commit_message="Automated ss data update ($(date +'%Y-%m-%d %H:%M:%S UTC'))"
           git commit -m "$commit_message" || echo "No changes to commit"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
